@@ -1,0 +1,145 @@
+{
+    "name": "List of colors",
+    "category": "Colors",
+    "words": [
+        {
+            "yellow": {
+                "es": "amarillo",
+                "nl": "geel",
+                "us": "yellow"
+            },
+            "orange": {
+                "es": "anaranjado",
+                "nl": "oranje",
+                "us": "orange"
+            },
+            "blue": {
+                "es": "azul",
+                "nl": "blauw",
+                "us": "blue"
+            },
+            "white": {
+                "es": "blanco",
+                "nl": "wit",
+                "us": "white"
+            },
+            "golden": {
+                "es": "dorado",
+                "nl": "gouden",
+                "us": "golden"
+            },
+            "gray": {
+                "es": "gris",
+                "nl": "grijs",
+                "us": "gray"
+            },
+            "brown": {
+                "es": "marrón",
+                "nl": "bruin",
+                "us": "brown"
+            },
+            "black": {
+                "es": "negro",
+                "nl": "zwart",
+                "us": "black"
+            },
+            "purple": {
+                "es": "púrpura",
+                "nl": "paars",
+                "us": "purple"
+            },
+            "red": {
+                "es": "rojo",
+                "nl": "rood",
+                "us": "red"
+            },
+            "pink": {
+                "es": "rosado",
+                "nl": "roze",
+                "us": "pink"
+            },
+            "green": {
+                "es": "verde",
+                "nl": "groen",
+                "us": "green"
+            }
+        },
+        {
+            "beige": {
+                "es": "beige, beis",
+                "nl": "beige",
+                "en": "beige"
+            },
+            "cherry-colored": {
+                "es": "cereza",
+                "nl": "kers",
+                "en": "cherry-colored"
+            },
+            "chocolate-colored": {
+                "es": "chocolate",
+                "nl": "",
+                "en": "chocolate-colored"
+            },
+            "emerald": {
+                "es": "esmerelda",
+                "nl": "emerald",
+                "en": "emerald"
+            },
+            "dark red": {
+                "es": "grana",
+                "nl": "donker rood",
+                "en": "dark red"
+            },
+            "smoky": {
+                "es": "humo",
+                "nl": "rook",
+                "en": "smoky"
+            },
+            "lilac": {
+                "es": "lila",
+                "nl": "lila",
+                "en": "lilac"
+            },
+            "mauve": {
+                "es": "malva",
+                "nl": "mauve",
+                "en": "mauve"
+            },
+            "mustard:colored": {
+                "es": "mostaza",
+                "nl": "mosterd",
+                "en": "mustard-colored"
+            },
+            "orange": {
+                "es": "naranja",
+                "nl": "oranje",
+                "en": "orange"
+            },
+            "gold": {
+                "es": "oro",
+                "nl": "goud",
+                "en": "gold"
+            },
+            "straw:colored": {
+                "es": "paja",
+                "nl": "stro",
+                "en": "straw-colored"
+            },
+            "pink": {
+                "es": "rosa",
+                "nl": "roze",
+                "en": "pink"
+            },
+            "turquoise": {
+                "es": "turquesa",
+                "nl": "turkoois",
+                "en": "turquoise"
+            },
+            "violet": {
+                "es": "violeta",
+                "nl": "violet",
+                "en": "violet"
+            }
+        }
+    ]
+}

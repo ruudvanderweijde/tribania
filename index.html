@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <style>
+        #canvas {
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <!--<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>-->
+    <script src="assets/js/createjs.min.js"></script>
+    <script>
+        var stage;
+
+        function init() {
+            stage = new createjs.Stage("main");
+            loadMain();
+            var c = createButton(10, 10, 100, 100, "text");
+            stage.addChild(c);
+            stage.update();
+        }
+
+        function loadMain() {
+            stage.clear();
+            loadGames();
+            stage.update();
+        }
+
+        function getGames() {
+            var folder = "assets/data/";
+            var files = [ "colors.json" ];
+            files = files.map(function(file) { return folder+file; });
+
+            return files;
+        }
+
+        function loadGames() {
+            var games = getGames();
+
+            var queue = new createjs.LoadQueue();
+            queue.addEventListener("fileload", handleGameLoaded);
+            queue.loadManifest(games, false); // Note the 2nd argument that tells the queue not to start loading yet
+            queue.load();
+
+        }
+
+        function handleGameLoaded(event) {
+            var result = event.result;
+
+            var container = createButton(result);
+            container.on("click", loadGame, null, false, result);
+
+            stage.addChild(container);
+            stage.update();
+        }
+
+        function loadGame(event, data) {
+//
+//            stage.clear();
+//            for (i=0;i<data.words.length;i++)
+
+            console.log("load game:");
+            console.log(event);
+        }
+
+        function getTop() {
+            console.log((stage.getNumChildren() * getHeight()) + getMargin());
+            return (stage.getNumChildren() * getHeight())
+                 + (stage.getNumChildren() * getMargin())
+                 + getMargin();
+        }
+
+        function getHeight() {
+            return 50;
+        }
+
+        function getMargin() {
+            return 20;
+        }
+
+        function getRectSize() {
+            var canvas = document.getElementById('main');
+            var width = canvas.width;
+
+            return {
+                "left": width * 0.1,
+                "top": getTop(),
+                "width": width * 0.8,
+                "height": getHeight(),
+                "color": "#428bca"
+            }
+        }
+
+        function createGameButton(result)
+        {
+            var rs = getRectSize();
+            var height = getHeight();
+
+            return createButton(rs.left, rs.top, rs.width, height, result.name, 10);
+        }
+
+        function createButton(left, top, width, height, text, degree, textcolor, bgcolor)
+        {
+            // set default values
+            degree = degree ? degree : 10;
+            bgcolor = bgcolor ? bgcolor : "blue";
+            textcolor = textcolor ? textcolor : "white";
+
+            var container = new createjs.Container();
+            container.x = left; container.y = top;
+
+            var target = new createjs.Shape();
+            target.graphics.beginFill(bgcolor).drawRoundRect(-10,-10, width, height, degree);
+            container.addChild(target);
+
+            var txt = new createjs.Text(text, "20px Arial", textcolor);
+            container.addChild(txt);
+
+            return container;
+        }
+    </script>
+</head>
+<body onload="init()">
+    <canvas id="main">
+        I'm sorry, please upgrade your browser.
+    </canvas>
+
+</body>
+</html>
